@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li::before {
+  content: "☐ ";
+}

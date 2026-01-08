@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TaxCoin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>TaxCoin</h1>
+
+  <section id="intake">
+    <h2>Inputs</h2>
+
+    <label>
+      Filing Status:
+      <select id="filingStatus">
+        <option value="single">Single</option>
+        <option value="mfj">Married Filing Jointly</option>
+        <option value="mfs">Married Filing Separately</option>
+        <option value="hoh">Head of Household</option>
+        <option value="qw">Qualifying Widow(er)</option>
+      </select>
+    </label>
+
+    <label>
+      W-2 Wages:
+      <input type="number" id="w2Wages" />
+    </label>
+
+    <label>
+      1099-INT Interest:
+      <input type="number" id="interestIncome" />
+    </label>
+
+    <label>
+      Self-Employment Income (1099-NEC):
+      <input type="number" id="selfEmploymentIncome" />
+    </label>
+
+    <label>
+      <input type="checkbox" id="hasMortgageInterest" />
+      Mortgage Interest (1098)
+    </label>
+
+    <button onclick="runTaxCoin()">Generate Checklist</button>
+  </section>
+
+  <section id="output">
+    <h2>Checklist</h2>
+    <div id="results"></div>
+    <button onclick="exportJSON()">Export JSON</button>
+    <button onclick="window.print()">Print</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
